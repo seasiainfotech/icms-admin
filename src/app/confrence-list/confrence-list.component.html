@@ -1,0 +1,192 @@
+<html>
+
+<body class="page-header-fixed page-quick-sidebar-over-content ">
+  <div class="wrapper">
+    <div class="page-header navbar navbar-fixed-top">
+      <!-- BEGIN HEADER INNER -->
+      <div class="page-header-inner">
+        <!-- BEGIN LOGO -->
+        <div class="row"  style="height: 100px" >
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="page-logo">
+              <a href="index.html">
+                <img src="../../assets/img/logo.png" alt="logo" class="logo-default" style="margin-top: -100px;"/>
+              </a>
+              <div class="menu-toggler sidebar-toggler hide"> </div>
+            </div>
+            <!--page-logo-->
+          </div>
+
+          <div class="col-xs-12 col-sm-8 col-md-8 col-right">
+            <a href="javascript:;" class="menu-toggler hd-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+            <div class="header-right" style="margin-top: 10px;" >
+              <div class="dropdown">
+                <a data-togg le="dropdown" class="dropdown-toggle" href="#" id="menu1">
+                  <i class="fa fa-user" aria-hidden="true"></i> blufeeld.com/ Peter Wilson
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation">
+                    <a role="menuitem" href="#">HTML</a>
+                  </li>
+                  <li role="presentation">
+                    <a role="menuitem" href="#">CSS</a>
+                  </li>
+                  <li role="presentation">
+                    <a role="menuitem" href="#">JavaScript</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--header-rights-->
+            <!-- END TOP NAVIGATION MENU -->
+          </div>
+        </div>
+      </div>
+      <!-- END LOGO -->
+    </div>
+    <!-- END HEADER -->
+
+    <div class="clearfix">
+    </div>
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+      <!-- BEGIN SIDEBAR -->
+
+      <!-- END SIDEBAR -->
+
+      <!-- BEGIN CONTENT -->
+      <div class="page-content-wrapper">
+        <div class="page-content inner-page">
+          <h1>My Conferences</h1>
+          <br/>
+          <div class="grid-srch">
+            <div class="grid-srch-lt">
+              <div class="input-group add-on">
+                <input type="text" id="srch-term" name="srch-term" placeholder="Search" class="form-control">
+                <div class="input-group-btn">
+                  <button type="submit" class="btn btn-default">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- TABS -->
+          <div class="Conference-Tabs">
+            <div class="pull-right Add-Event">
+              <a href="javascript:;" class="btn">Add Event</a>
+            </div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Upcoming </a>
+              </li>
+              <li role="presentation">
+                <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Draft</a>
+              </li>
+              <li role="presentation">
+                <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Completed</a>
+              </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="home">
+                <div class="row" >
+                  <div class="Upcoming-tab-content" *ngFor="let event of dataSource.event_list; let ind of index">
+                    <div class="col-sm-4 col-md-3">
+                      <div class="img-block">
+                      <img src={{event.eventImage}} alt="image">
+                      </div>
+                      <!--img-block-->
+                    </div>
+                 
+                    <div  class="col-sm-8 col-md-9"   routerLink='/confrence-dashboard/:{{event.event_id}}' routerLinkActive="active" >
+                      <div class="content-block">
+                        <h2>{{event.title}}</h2>
+                        <ul class="list-inline">
+                          <li class="place">{{event.location_name}}</li>
+                          <li class="date">{{convertToUtcDate(event.start_date_time)}}
+                            <span class="green-text">{{convertToUtcTime(event.start_date_time)}}</span>
+                          </li>
+                        </ul>
+                        <p>{{event.description}}</p>
+                      
+                      </div>
+                      <!--content-block-->
+                    </div>
+                  </div>
+                  
+                  <!--Upcoming-tab-content-->
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="row">
+                  <div class="Upcoming-tab-content" *ngFor="let event of dataSource.event_list">
+                    <div class="col-sm-4 col-md-3">
+                      <div class="img-block">
+                        <img src="{{event.eventImage}}" alt="image">
+                      </div>
+                      <!--img-block-->
+                    </div>
+
+                    <div class="col-sm-8 col-md-9" [routerLink]="['/confrence-detail']" routerLinkActive="active">
+                      <div class="content-block">
+                        <h2>{{event.title}}</h2>
+                        <ul class="list-inline">
+                          <li class="place">{{event.location_name}}</li>
+                          <li class="date">{{convertToUtcDate(event.start_date_time)}}
+                            <span class="green-text">{{convertToUtcTime(event.start_date_time)}}</span>
+                          </li>
+                        </ul>
+                        <p>{{event.description}}</p>
+                      </div>
+                      <!--content-block-->
+                    </div>
+                  </div>
+                  
+  
+                  <!--Upcoming-tab-content-->
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="messages">
+                <div class="Completed-tab-content">
+                  <figure>
+                    <img src="../../assets/img/star.png">
+                  </figure>
+                  <figcaption>You Don’t have any live events</figcaption>
+                </div>
+                <!--Completed-tab-content-->
+              </div>
+            </div>
+
+          </div>
+          <!-- TABS -->
+
+        </div>
+        <!-- inner page -->
+
+      </div>
+      <!-- END CONTENT -->
+
+    </div>
+    <!-- END CONTAINER -->
+
+    <!-- FOOTER -->
+    <footer class="full-footer">
+      <p>&copy; Copyright &copy; 2018 I-CMS </p>
+    </footer>
+
+  </div>
+
+
+
+</body>
+
+</html>

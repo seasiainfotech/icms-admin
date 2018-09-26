@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <title>Session List</title>
+
+</head>
+
+<body class="page-header-fixed page-quick-sidebar-over-content ">
+  <div class="wrapper">
+
+
+    <div class="clearfix">
+    </div>
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+      <!-- BEGIN SIDEBAR -->
+      <div class="page-sidebar-wrapper">
+        <div class="page-sidebar navbar-collapse collapse">
+
+
+          <!-- END SIDEBAR MENU -->
+        </div>
+      </div>
+      <!-- END SIDEBAR -->
+
+      <!-- BEGIN CONTENT -->
+      <div class="page-content-wrapper">
+        <div class="page-content inner-page">
+
+          <h1>Session List</h1>
+          <!-- Conference-Preiew -->
+          <div class="Upcoming-tab-content Conference-Preiew Conference-Preiew2">
+            <!--<div class="col-sm-12">
+                   <div class="pull-right Add-Event">
+				   <a href="javascript:;" class="btn">Add Event</a>
+				   </div>
+                </div>-->
+
+          </div>
+          <!--Upcoming-tab-content-->
+          <!-- Conference-Preiew -->
+          <div class="event-sec ">
+            <div class="Upcoming-tab-content Upcoming-tab-content2">
+              <!-- for if -->
+              <div *ngIf="detailData.session_list!=null;else no_session">
+              <div class="col-sm-8 col-md-11" *ngFor="let session of detailData.session_list">
+                <!-- <div class="">
+                      <div class="img-block img-block3">
+                        <p>M</p>
+                      </div>
+                      img-block
+                    </div> -->
+                <div class="content-block content-block2">
+                  <h2>
+                    <b>Title:</b>{{session.title}}</h2>
+                  <h2>
+                    <b>Description:</b>
+                   <div class ="des">{{session.description.trim()}}</div>
+                  </h2>
+
+                  <div class="col-sm-12">
+
+                    <div class="readmore">
+                      <a href="javascript:;" class="">Read More</a>
+                    </div>
+                  </div>
+                </div>
+                <!--content-block-->
+              </div>
+            </div>
+              <!-- for else -->
+              <ng-template #no_session> 
+                <div class="center">
+                <figure>
+                  <img src="../../assets/img/star.png">
+                </figure>
+                <figcaption>You don’t have any session </figcaption>
+              </div>
+              </ng-template>
+              
+            </div>
+          </div>
+
+        </div>
+        <!-- inner page -->
+      </div>
+      <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+  </div>
+</body>
+
+</html>

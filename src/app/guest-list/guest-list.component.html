@@ -1,0 +1,31 @@
+<div class="event-sec Upcoming-tab-content2">
+  <div *ngIf="res.Guest!=null;else no_guest">
+    <div class="Upcoming-tab-content" *ngFor="let item of res.Guest">
+      <div class="">
+        <div class="img-block">
+          <img src="../../assets/img/guests-screen1.jpg" alt="image">
+        </div>
+        <!--img-block-->
+      </div>
+
+      <div class="col-sm-8 col-md-9">
+        <div class="content-block">
+          <h2>{{item.name}}
+          </h2>
+          <p>{{item.email}} </p>
+        </div>
+        <!--content-block-->
+      </div>
+    </div>
+  </div>
+
+  <!-- for else -->
+  <ng-template #no_guest>
+    <div class="center">
+      <figure>
+        <img src="../../assets/img/star.png">
+      </figure>
+      <figcaption>You don’t have any guest </figcaption>
+    </div>
+  </ng-template>
+</div>

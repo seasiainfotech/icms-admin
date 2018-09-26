@@ -1,0 +1,79 @@
+<!-- BEGIN CONTENT -->
+<div class="page-content-wrapper">
+    <div class="page-content inner-page">
+        
+      <h1>Conference Preiew</h1><br/>
+      <div class="grid-srch">
+        <div class="grid-srch-lt"> 
+          <div class="input-group add-on">
+            <input type="text" id="srch-term" name="srch-term" placeholder="Search" class="form-control">
+            <div class="input-group-btn">
+              <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+        
+        <!-- Conference-Preiew -->
+        
+            <div class="Upcoming-tab-content Conference-Preiew">
+                <div class="col-sm-4 col-md-3">
+                    <div class="img-block">
+                        <img src="{{detailData.event.eventImage}}" alt="image">
+                    </div><!--img-block-->
+                </div>
+
+                <div class="col-sm-8 col-md-9">
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="cp-content">
+                                        <h3><i class="fa fa-user"></i>{{detailData.event.title}}</h3>
+                                    <p>By {{detailData.organiser.first_name}} {{detailData.organiser.last_name}}</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="cp-content">
+                                    <h3><i class="fa fa-calendar"></i> Conference Starts</h3>
+                                    <p>{{convertToUtcDate(detailData.event.start_date_time)}}</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="cp-content">
+                                    <h3><i class="fa fa-calendar"></i> Conference Ends</h3>
+                                    <p>{{convertToUtcDate(detailData.event.end_date_time)}}</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="cp-content">
+                                    <h3><i class="fa fa-map-marker"></i> {{detailData.event.location_name}}</h3>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="cp-content">
+                                    <h3><i class="fa fa-tag"></i> Conference Type</h3>
+                                    <p>{{detailData.event.eventType}}</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="cp-content">
+                                    <h3><i class="fa fa-tag"></i> Conference Category</h3>
+                                    <p>{{detailData.event.eventCategory}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--content-block-->
+                </div>
+            </div>  <!--Upcoming-tab-content-->  
+        <!-- Conference-Preiew -->
+
+    </div>
+    <!-- inner page -->
+
+  </div>
+  {{detailData.event.event_id}}
+  <p><a href="javascript:;" class="btn btn-primary pink-btn" role="button" routerLink = '/confrence-sessions/:{{detailData.event.event_id}}'>Sessions List</a> </p>
+  <p><a href="javascript:;" class="btn btn-primary pink-btn" role="button" routerLink = '/confrence-guestList/:{{detailData.event.event_id}}'>Guests List</a> </p>
+  <p><a href="javascript:;" class="btn btn-primary pink-btn" role="button" routerLink = '/confrence-speakers/:{{detailData.event.event_id}}'>Speakers List</a> </p>
+  <!-- END CONTENT -->

@@ -1,0 +1,220 @@
+
+img {
+    max-width: 100%;
+    width: auto;
+}
+.btn-default {
+	color: #fff;
+	background-color: #333;
+	border-color: #333;
+    transition-duration: .3s;
+    -webkit-transition-duration: .3s;
+    -moz-transition-duration: .3s;
+}
+.page-header.navbar .page-logo .logo-default {
+	height: 46px;
+}
+/*-- My Conference --*/
+.page-sidebar {
+	background: #333;
+}
+.page-header-inner {
+    background: #68a437;
+}
+
+.grid-srch-lt {
+	width: 45%;
+	float: right;
+}
+.inner-page h1 {
+	font-size: 20px;
+	color: #333;
+}
+.inner-page h1{
+	padding: 16px 10px;
+	background: #f2f2f2;
+}
+.grid-srch{
+	padding: 10px;
+	background: #f2f2f2;
+}
+.Conference-Tabs{
+    float: left;
+    width: 100%;
+    margin: 15px 0;
+}
+.Conference-Tabs .nav-tabs > li {
+	width: 130px;
+	text-align: center;
+}
+.Conference-Tabs .nav-tabs > li.active > a, .Conference-Tabs .nav-tabs > li.active > a:focus, .Conference-Tabs .nav-tabs > li.active > a:hover {
+	color: #fff;
+	cursor: default;
+	background-color: #333;
+	border: 1px solid #333;
+}
+.Conference-Tabs .nav-tabs > li > a {
+	color: #333;
+    text-transform: uppercase;
+}
+.Conference-Tabs .tab-content > .tab-pane {
+	padding: 20px;
+	background: #ebebeb;
+	min-height: 500px;
+}
+.Upcoming-tab-content {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+	border-bottom: 1px dashed #ccc;
+	padding-bottom: 10px;
+}
+    .content-block {
+	float: left;
+	width: 100%;
+} .img-block {
+	float: left;
+	width: 100%;
+}
+ .img-block {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 2px 2px 4px 1px #ccc;
+}
+.content-block h2{
+	font-size: 20px;
+	color: #333;    
+    padding: 15px 0 0;
+}
+.content-block ul{
+    padding: 15px 0;
+}
+.content-block .place{
+	font-size: 18px;
+	color: #333;    
+}
+.content-block .date{
+	font-size: 16px;
+	color: #333;    
+}
+.content-block .green-text{
+    font-weight: 600;
+	color: #68a437;    
+}
+.content-block .place::after {
+	content: "|";
+	padding-left: 10px;
+}
+.content-block p {
+	color: #6f6f6f;
+	font-size: 14px;
+	line-height: 25px;
+	margin-bottom: 15px;
+}
+.Completed-tab-content{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.Completed-tab-content figure {
+	padding: 100px 0 15px;
+}
+.Completed-tab-content figure img {
+	height: 60px;
+}
+.Completed-tab-content figcaption {
+	color: #6f6f6f;
+	font-size: 14px;
+	line-height: 25px;
+	margin-bottom: 15px;
+}
+.Conference-Tabs .Add-Event a.btn{
+    background: #68a437;
+    border-color: #68a437;
+    color: #fff;
+    transition-duration: .3s;
+    -webkit-transition-duration: .3s;
+    -moz-transition-duration: .3s;
+    font-weight: 600;
+}
+.Conference-Tabs .Add-Event a.btn:hover, .Conference-Tabs .Add-Event a.btn:focus{
+    background: #333;
+    border-color: #333;
+}
+
+
+/*-- My Conference --*/
+
+/*-- Conference-Preiew --*/
+.Conference-Preiew {
+	padding: 25px 0;
+	border-bottom: none;
+}
+.cp-content {
+	background: #f2f2f2;
+	padding: 15px 15px 15px 38px;
+	border-radius: 7px;
+	margin-bottom: 20px;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.cp-content h3 {
+	font-size:18px;
+	color: #333;
+}
+.cp-content  p {
+	color: #6f6f6f;
+	font-size: 14px;
+	margin-top: 10px;
+}
+.cp-content i {
+	color: #777;
+	position: absolute;
+	left: 15px;
+}
+/*-- Conference-Preiew --*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-- Responsive --*/
+@media (min-width:767px){
+.cp-content {
+	min-height: 100px;
+}
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
