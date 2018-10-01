@@ -80,7 +80,7 @@
           <!-- TABS -->
           <div class="Conference-Tabs">
             <div class="pull-right Add-Event">
-              <a href="javascript:;" class="btn">Add Event</a>
+              <a href="javascript:;" class="btn"  routerLink='/create-confrence' routerLinkActive="active">Add Event</a>
             </div>
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
@@ -136,9 +136,9 @@
                       <!--img-block-->
                     </div>
 
-                    <div class="col-sm-8 col-md-9" [routerLink]="['/confrence-detail']" routerLinkActive="active">
+                    <div class="col-sm-8 col-md-9" routerLink='/confrence-detail' routerLinkActive="active">
                       <div class="content-block">
-                        <h2>{{event.title}}</h2>
+                        <h2>{{event.title}}</h2>  
                         <ul class="list-inline">
                           <li class="place">{{event.location_name}}</li>
                           <li class="date">{{convertToUtcDate(event.start_date_time)}}

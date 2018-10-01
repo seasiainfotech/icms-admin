@@ -13,7 +13,7 @@ export class GetSpeakerListService {
   constructor(private _http: HttpClient) { }
 
   getspeakersList(eventid): Observable<IGetSpeakerListResponse[]> {
-  //  var eventid = "17";
+    var eventidd = "17";
     return this._http.get<IGetSpeakerListResponse[]>(this._url+eventid);
   }
 }

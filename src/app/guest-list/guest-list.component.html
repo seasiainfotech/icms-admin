@@ -1,9 +1,30 @@
 <div class="event-sec Upcoming-tab-content2">
+    <div class="page-header navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner">
+          <!-- BEGIN LOGO -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="page-logo">
+                <a href="index.html">
+                  <img src="../../assets/img/logo.png" alt="logo" class="logo-default"/>
+                </a>
+                <div class="menu-toggler sidebar-toggler hide"> </div>
+              </div><!--page-logo-->
+            </div>
+         
+          </div>
+        </div>
+      <!-- END LOGO -->  
+    </div>
+    <br/><br/><br/>
+    <div class="page-content inner-page">
+        <h1>Guest List</h1>
   <div *ngIf="res.Guest!=null;else no_guest">
-    <div class="Upcoming-tab-content" *ngFor="let item of res.Guest">
+    <div class="Upcoming-tab-content" *ngFor="let item of res.Guest" style="height: 100px;">
       <div class="">
         <div class="img-block">
-          <img src="../../assets/img/guests-screen1.jpg" alt="image">
+          <img src="{{item.userImage}}" alt="image">
         </div>
         <!--img-block-->
       </div>
@@ -27,5 +48,5 @@
       </figure>
       <figcaption>You don’t have any guest </figcaption>
     </div>
-  </ng-template>
+  </ng-template></div>
 </div>

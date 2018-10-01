@@ -43,6 +43,7 @@
 
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
+  
   <!-- BEGIN SIDEBAR -->
   <div class="page-sidebar-wrapper">
     <div class="page-sidebar navbar-collapse collapse">
@@ -70,14 +71,14 @@
                 </a>
               </li>
               <li class="start active">
-                <a href="javascript:;">
+                <a href="javascript:;" routerLink="/confrence-detail/sessions" routerLinkActive="active">
                   <i class="fa fa-list"></i>
-                  <span class="title">Sessions</span>
+                  <span class="title" >Sessions</span>
                   <span class="arrow "></span>
                 </a>   
               </li>
               <li>
-                <a href="javascript:;">
+                <a href="javascript:;" routerLink="/confrence-detail/speakers" routerLinkActive="active">
                   <i class="fa fa-list"></i>
                   <span class="title">Speakers</span>
                   <span class="arrow "></span>
@@ -91,9 +92,9 @@
                 </a>
               </li>
               <li>
-                <a href="javascript:;">
+                <a href="javascript:;" routerLink="/confrence-detail/guests" routerLinkActive="active">
                   <i class="fa fa-gears"></i>
-                  <span class="title">Guests</span>
+                  <span class="title" >Guests</span>
                   <span class="arrow "></span>
                 </a>
               </li>  
@@ -134,10 +135,10 @@
       
       <!-- END SIDEBAR MENU -->
     </div>
-  </div>
-  <!-- END SIDEBAR -->
 
-  <!-- <router-outlet></router-outlet> -->
+  </div>
+  <router-outlet></router-outlet>
+  <!-- END SIDEBAR -->
 
 </div>
 <!-- END CONTAINER -->
@@ -150,4 +151,3 @@
   </div>
   </body>
 </html>
-

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HideUnhideNAvService } from '../hide-unhide-nav.service';
 
 
 @Component({
@@ -9,7 +8,7 @@ import { HideUnhideNAvService } from '../hide-unhide-nav.service';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor(public navService: HideUnhideNAvService ) { }
+  constructor( ) { }
 
   ngOnInit() {
   }

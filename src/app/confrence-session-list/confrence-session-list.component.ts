@@ -17,7 +17,7 @@ export class ConfrenceSessionListComponent implements OnInit {
   constructor(private datePipe: DatePipe, private route: ActivatedRoute, private _sessionList: SessionsListService, private _checkConnection: InternetConnection) {
     this.route.params.subscribe(params => {
       this.eventId = params['event_id'];
-console.log("Event_Id-->"+ this.eventId )
+       console.log("Event_Id-->"+ this.eventId )
     });
   }
   ngOnInit() {

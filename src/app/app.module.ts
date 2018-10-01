@@ -16,6 +16,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ConfrenceSessionListComponent } from './confrence-session-list/confrence-session-list.component';
 import { GuestListComponent } from './guest-list/guest-list.component';
 import { SpeakerListComponent } from './speaker-list/speaker-list.component';
+import { CreateConfrenceComponent } from './create-confrence/create-confrence.component';
 
  
 
@@ -29,7 +30,8 @@ import { SpeakerListComponent } from './speaker-list/speaker-list.component';
     NavigationComponent,
     ConfrenceSessionListComponent,
     GuestListComponent,
-    SpeakerListComponent
+    SpeakerListComponent,
+    CreateConfrenceComponent
   ],
   imports: [
     BrowserModule,

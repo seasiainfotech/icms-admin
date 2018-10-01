@@ -1,7 +1,27 @@
 <!-- BEGIN CONTENT -->
 <div class="page-content-wrapper">
     <div class="page-content inner-page">
-        
+
+            <div class="page-header navbar navbar-fixed-top">
+                    <!-- BEGIN HEADER INNER -->
+                    <div class="page-header-inner">
+                      <!-- BEGIN LOGO -->
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                          <div class="page-logo">
+                            <a href="index.html">
+                              <img src="../../assets/img/logo.png" alt="logo" class="logo-default"/>
+                            </a>
+                            <div class="menu-toggler sidebar-toggler hide"> </div>
+                          </div><!--page-logo-->
+                        </div>
+                     
+                      </div>
+                    </div>
+                  <!-- END LOGO -->  
+                </div>
+
+<br/><br/> 
       <h1>Conference Preiew</h1><br/>
       <div class="grid-srch">
         <div class="grid-srch-lt"> 
@@ -72,8 +92,14 @@
     <!-- inner page -->
 
   </div>
-  {{detailData.event.event_id}}
+  <!-- {{detailData.event.event_id}} -->
   <p><a href="javascript:;" class="btn btn-primary pink-btn" role="button" routerLink = '/confrence-sessions/:{{detailData.event.event_id}}'>Sessions List</a> </p>
   <p><a href="javascript:;" class="btn btn-primary pink-btn" role="button" routerLink = '/confrence-guestList/:{{detailData.event.event_id}}'>Guests List</a> </p>
   <p><a href="javascript:;" class="btn btn-primary pink-btn" role="button" routerLink = '/confrence-speakers/:{{detailData.event.event_id}}'>Speakers List</a> </p>
   <!-- END CONTENT -->
+
+
+  <footer class="full-footer">
+        <p>&copy; Copyright &copy; 2018 I-CMS </p>
+      </footer>
+    

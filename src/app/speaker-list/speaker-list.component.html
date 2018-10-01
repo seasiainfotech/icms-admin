@@ -1,4 +1,25 @@
-<div class="page-content-wrapper">
+<div class="page-content-wrapper ds-inline">
+    <div class="page-header navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner">
+          <!-- BEGIN LOGO -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="page-logo">
+                <a href="index.html">
+                  <img src="../../assets/img/logo.png" alt="logo" class="logo-default"/>
+                </a>
+                <div class="menu-toggler sidebar-toggler hide"> </div>
+              </div><!--page-logo-->
+            </div>
+         
+          </div>
+        </div>
+      <!-- END LOGO -->  
+    </div>
+    <br/>
+    <br/>
+    <br/>
   <div class="page-content inner-page">
 
     <h1>Speaker List</h1>
@@ -31,7 +52,7 @@
     
     <div class="event-sec speaker-list">
         <div *ngIf="res.Speaker!=null;else no_speaker">
-      <div class="Upcoming-tab-content" *ngFor="let item of res.Speaker">
+      <div class="Upcoming-tab-content" *ngFor="let item of res.Speaker" style="height: 180px; width: 100%">
         <div class="">
           <div class="img-block">
             <img src="{{item.speakerImage}}" alt="image">
@@ -46,7 +67,8 @@
                 <h2>
                   <b>{{item.name}}</b>
                 </h2>
-                <h2>{{item.qualification}}</h2>
+                <div class="des">{{item.qualification}}</div>
+               
               </span>
               <div class="social-icons">
                 <a href="javascript:;">
@@ -59,7 +81,7 @@
               </div>
             </div>
 
-            <p>{{res.description}}</p>
+            <p>{{item.description}}</p>
 
           </div>
           <!--content-block-->

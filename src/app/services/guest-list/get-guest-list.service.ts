@@ -12,7 +12,7 @@ export class GetGuestListService {
   constructor(private _http: HttpClient) { }
 
   getGuestList(id): Observable<IGetGuestListResponse[]> {
-    var eventid = "17";
+    var eventidd = "17";
     return this._http.get<IGetGuestListResponse[]>(this._url+id);
   }
 }

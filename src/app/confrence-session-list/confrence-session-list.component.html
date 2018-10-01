@@ -12,6 +12,24 @@
 </head>
 
 <body class="page-header-fixed page-quick-sidebar-over-content ">
+    <div class="page-header navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner">
+          <!-- BEGIN LOGO -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="page-logo">
+                <a href="index.html">
+                  <img src="../../assets/img/logo.png" alt="logo" class="logo-default"/>
+                </a>
+                <div class="menu-toggler sidebar-toggler hide"> </div>
+              </div><!--page-logo-->
+            </div>
+         
+          </div>
+        </div>
+      <!-- END LOGO -->  
+    </div>
   <div class="wrapper">
 
 
@@ -50,41 +68,41 @@
             <div class="Upcoming-tab-content Upcoming-tab-content2">
               <!-- for if -->
               <div *ngIf="detailData.session_list!=null;else no_session">
-              <div class="col-sm-8 col-md-11" *ngFor="let session of detailData.session_list">
-                <!-- <div class="">
+                <div class="col-sm-8 col-md-11" *ngFor="let session of detailData.session_list">
+                  <!-- <div class="">
                       <div class="img-block img-block3">
-                        <p>M</p>
+                        <p>{{session.title.substring(0,1)}}</p>
                       </div>
-                      img-block
+                      
                     </div> -->
-                <div class="content-block content-block2">
-                  <h2>
-                    <b>Title:</b>{{session.title}}</h2>
-                  <h2>
-                    <b>Description:</b>
-                   <div class ="des">{{session.description.trim()}}</div>
-                  </h2>
+                  <div class="content-block content-block2">
+                    <h2>
+                      <b>Title: {{session.title}}</b></h2>
+                    <h2>
+                      <b>Description:</b>
+                      <div >{{session.description.trim()}}</div>
+                    </h2>
 
-                  <div class="col-sm-12">
+                    <div class="col-sm-12">
 
-                    <div class="readmore">
-                      <a href="javascript:;" class="">Read More</a>
+                      <div class="readmore">
+                        <a href="javascript:;" class="">Read More</a>
+                      </div>
                     </div>
                   </div>
+                  <!--content-block-->
                 </div>
-                <!--content-block-->
               </div>
-            </div>
-              <!-- for else -->
-              <ng-template #no_session> 
+              <!-- for else --> 
+              <ng-template #no_session>
                 <div class="center">
-                <figure>
-                  <img src="../../assets/img/star.png">
-                </figure>
-                <figcaption>You don’t have any session </figcaption>
-              </div>
+                  <figure>
+                    <img src="../../assets/img/star.png">
+                  </figure>
+                  <figcaption>You don’t have any session </figcaption>
+                </div>
               </ng-template>
-              
+
             </div>
           </div>
 

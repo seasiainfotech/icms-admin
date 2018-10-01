@@ -14,9 +14,7 @@ export class ConfrencePreviewComponent implements OnInit {
   public eventId;
   public detailData: any = {};
   name: string;
-
- 
-
+  public id:any;
 
   constructor(private datePipe: DatePipe, private route: ActivatedRoute, private _confrenceDetail: ConfrenceDetailService, private _checkConnection: InternetConnection) {
     this.route.params.subscribe(params => {
@@ -24,16 +22,15 @@ export class ConfrencePreviewComponent implements OnInit {
 
     });
   }
-
   
   ngOnInit() {
     this._checkConnection.online$.subscribe(value => {
       this.name = `${value}`;
       if (this.name === "true") {
      
-        let id = this.eventId.split(":");
+       this.id = this.eventId.split(":");
  
-        this._confrenceDetail.getConfrencetDetail("eventdetails?event_id=" + id[1] + "")
+        this._confrenceDetail.getConfrencetDetail("eventdetails?event_id=" + this.id[1] + "")
           .subscribe(data => {
             this.detailData = data;
             console.log("event-detail", this.detailData);

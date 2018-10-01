@@ -7,6 +7,7 @@ import { ConfrenceDashboardComponent } from './confrence-dashboard/confrence-das
 import { ConfrenceSessionListComponent } from './confrence-session-list/confrence-session-list.component';
 import { GuestListComponent } from './guest-list/guest-list.component';
 import { SpeakerListComponent } from './speaker-list/speaker-list.component';
+import { CreateConfrenceComponent } from './create-confrence/create-confrence.component';
 
 const routes: Routes = [
   { path: 'events-list', component: LoginComponent }
@@ -15,10 +16,10 @@ const routes: Routes = [
 
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
-    path: 'home', component: LoginComponent, data: {
-      page: 'home'
+    path: 'login', component: LoginComponent, data: {
+      page: 'login'
     }
   },
   {
@@ -27,9 +28,27 @@ const appRoutes: Routes = [
     }
   },
   {
-    path: 'confrence-detail', component: ConfrencePreviewComponent, data: {
-      page: 'confrences'
-    }
+    path: 'confrence-detail', 
+    component: ConfrencePreviewComponent,
+    children: [                          
+      {
+          path:'dashboard',
+          component: ConfrenceDashboardComponent
+      },
+      {
+          path:'sessions',
+          component: ConfrenceSessionListComponent
+      },
+      {
+          path:'speakers',
+          component: SpeakerListComponent
+      },
+      {
+          path:'guests',
+          component: GuestListComponent
+      },
+  ]
+  
   },
   // confrence-detail/:eventId
 
@@ -49,7 +68,11 @@ const appRoutes: Routes = [
     path: 'confrence-speakers/:event_id',
     component: SpeakerListComponent
   },
-  { path: '**', redirectTo: '/home', pathMatch: 'full' }
+  {
+    path: 'create-confrence',
+    component: CreateConfrenceComponent
+  },
+  { path: '**', redirectTo: '/login', pathMatch: 'full' }
 
 ];
 
