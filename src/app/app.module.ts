@@ -17,6 +17,9 @@ import { ConfrenceSessionListComponent } from './confrence-session-list/confrenc
 import { GuestListComponent } from './guest-list/guest-list.component';
 import { SpeakerListComponent } from './speaker-list/speaker-list.component';
 import { CreateConfrenceComponent } from './create-confrence/create-confrence.component';
+import { SessionDetailComponent } from './session-detail/session-detail.component';
+import { SpeakerDetailComponent } from './speaker-detail/speaker-detail.component';
+import { GuestDetailComponent } from './guest-detail/guest-detail.component';
 
  
 
@@ -31,7 +34,10 @@ import { CreateConfrenceComponent } from './create-confrence/create-confrence.co
     ConfrenceSessionListComponent,
     GuestListComponent,
     SpeakerListComponent,
-    CreateConfrenceComponent
+    CreateConfrenceComponent,
+    SessionDetailComponent,
+    SpeakerDetailComponent,
+    GuestDetailComponent
   ],
   imports: [
     BrowserModule,
